@@ -19,6 +19,7 @@ group :development do
  gem 'therubyracer'
  gem 'sqlite3', '1.3.4'
  gem 'annotate', '2.4.0'
+ gem 'rspec-rails', '~> 2.7.0'
 
  # Gems used only for assets and not required
  # in production environments by default.
@@ -27,6 +28,11 @@ group :development do
    gem 'coffee-rails', '~> 3.1.1'
    gem 'uglifier', '>= 1.0.3'
  end
+end
+
+group :test do
+  gem 'rspec-rails', '~> 2.7.0'
+  gem 'webrat', '~> 0.7.3'
 end
 
 # To use ActiveModel has_secure_password
@@ -40,8 +46,3 @@ end
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
-
-group :test do
-  # Pretty printed test output
-  gem 'turn', :require => false
-end
