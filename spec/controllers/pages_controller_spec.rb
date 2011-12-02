@@ -8,6 +8,13 @@ describe PagesController do
       get 'home'
       response.should be_success
     end
+
+    it "should have the right title" do
+      get 'home'
+      #check to see if 'title' tag has the right content
+      response.should have_selector("title",
+                      :content => "Score board | Home")
+    end
   end
 
   describe "GET 'contact'" do
@@ -15,12 +22,26 @@ describe PagesController do
       get 'contact'
       response.should be_success
     end
+
+    it "should have the right title" do
+      get 'contact'
+      #check to see if 'title' tag has the right content
+      response.should have_selector("title",
+                      :content => "Score board | Contact")
+    end
   end
 
   describe "GET 'about'" do
     it "should be successful" do
       get 'about'
       response.should be_success
+    end
+
+    it "should have the right title" do
+      get 'about'
+      #check to see if 'title' tag has the right content
+      response.should have_selector("title",
+                      :content => "Score board | About")
     end
   end
 
