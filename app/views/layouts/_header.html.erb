@@ -1,0 +1,12 @@
+<header>
+      <%logo = image_tag("Logo.png", :alt => "Score board", :class => "round") %>
+      <%= link_to logo, root_path %>
+      <nav class="round">
+        <ul>
+          <%fb_logo = image_tag("facebook-logo.png", :alt => "Connect with Facebook") %>
+          <li><%= link_to fb_logo, "#" %></li>
+          <%twt_logo = image_tag("twitter.png", :alt => "Connect with Twitter") %>
+           <li><%= link_to twt_logo, "#" %> </li>
+        </ul>
+      </nav>
+</header>
